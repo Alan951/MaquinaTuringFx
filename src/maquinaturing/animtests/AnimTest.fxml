@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="maquinaturing.animtests.AnimTestController">
+   <children>
+      <Label fx:id="lblHello" layoutX="94.0" layoutY="75.0" text="Hola mundo">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHello" layoutX="94.0" layoutY="146.0" mnemonicParsing="false" onAction="#onAction" text="Action!" />
+      <Button fx:id="btnInterpole" layoutX="257.0" layoutY="146.0" mnemonicParsing="false" onAction="#onInterpole" text="Interpole" />
+   </children>
+</AnchorPane>

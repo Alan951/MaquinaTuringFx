@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maquinaturing.view.MainViewController">
+   <children>
+      <VBox fx:id="mainContainer" alignment="TOP_CENTER" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="cintasContainerRoot" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <children>
+                  <VBox fx:id="cintasContainer" alignment="CENTER" spacing="5.0" style="-fx-padding: 5 0 5 0;" />
+               </children>
+            </Pane>
+            <Pane fx:id="controlsRoot" prefHeight="261.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="-1.0" text="Instrucciones">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnCompile" layoutX="242.0" layoutY="25.0" mnemonicParsing="false" onAction="#onCompilePressed" text="OK!" />
+                  <TextArea fx:id="txtArea" layoutX="6.0" layoutY="24.0" prefHeight="220.0" prefWidth="232.0" promptText="Escribe aqui las instrucciones" text="// w = w^I | Σ = a, b, c&#10;&#10;S = q1&#10;F = q5&#10;&#10;(q1, (þ, þ)) = (q5, (þ, þ), (S, S))&#10;&#10;(q1, (a, þ)) = (q2, (a, a), (R, R))&#10;(q1, (b, þ)) = (q2, (b, b), (R, R))&#10;(q1, (c, þ)) = (q2, (c, c), (R, R))&#10;&#10;(q2, (a, þ)) = (q2, (a, a), (R, R))&#10;(q2, (b, þ)) = (q2, (b, b), (R, R))&#10;(q2, (c, þ)) = (q2, (c, c), (R, R))&#10;&#10;(q2, (þ, þ)) = (q3, (þ, þ), (S, L))&#10;&#10;(q3, (þ, a)) = (q3, (þ, a), (S, L))&#10;(q3, (þ, b)) = (q3, (þ, b), (S, L))&#10;(q3, (þ, c)) = (q3, (þ, c), (S, L))&#10;&#10;(q3, (þ, þ)) = (q4, (þ, þ), (L, R))&#10;&#10;(q4, (a, a)) = (q4, (a, a), (L, R))&#10;(q4, (b, b)) = (q4, (b, b), (L, R))&#10;(q4, (c, c)) = (q4, (c, c), (L, R))&#10;&#10;(q4, (þ, þ)) = (q5, (þ, þ), (S, S))">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextArea>
+                  <Button layoutX="195.0" layoutY="240.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="0.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="lineaFocused" layoutX="7.0" layoutY="244.0" prefHeight="17.0" prefWidth="83.0" text="Linea: ">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCadena" layoutX="354.0" layoutY="25.0" prefHeight="25.0" prefWidth="232.0" text="aaaa" />
+                  <Label layoutX="354.0" layoutY="6.0" text="Introducir cadena" />
+                  <Button fx:id="btnStart" layoutX="537.0" layoutY="56.0" mnemonicParsing="false" onAction="#onStartMTPressed" text="Iniciar" />
+                  <Button fx:id="btnNextStep" layoutX="354.0" layoutY="83.0" mnemonicParsing="false" onAction="#onNextStep" prefHeight="25.0" prefWidth="232.0" text="Siguiente estado" />
+                  <Label fx:id="lblEstadoActual" layoutX="242.0" layoutY="203.0" prefHeight="37.0" prefWidth="349.0" text="Estado actual:" />
+                  <Text fx:id="textFinal" layoutX="249.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Llego al estado final" textAlignment="CENTER" wrappingWidth="339.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="354.0" layoutY="110.0" mnemonicParsing="false" onAction="#onNextStepAutomatic" prefHeight="25.0" prefWidth="232.0" text="Auto siguiente estado" />
+                  <Button layoutX="478.0" layoutY="56.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
